@@ -61,3 +61,22 @@ img{ border:none;}  /* 取消插入图片存在的边框 */
 	left:0;
 	position:absolute;
 }  
+
+.wxinfodiv2{
+	position:relative;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:15;
+	line-height:0;
+}
+
+/* 背景图样式 */
+.wxinfoimg2 {
+	width:100%;
+	left:0;
+	top:0;
+	vertical-align:top;
+}
+
