@@ -10,8 +10,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.3, user-scalable=no" />
 	<meta name="MobileOptimized" content="320"/>
 	<meta name="format-detection" content="telephone=no">
-	<link href="cssv2/css.css?r=201612131800" rel="Stylesheet" type="text/css" media="screen">
+	<link href="cssv2/css.css?r=201612132000" rel="Stylesheet" type="text/css" media="screen">
 </head>
+
+<body>
+<!-- 微信扫描，iPhone、iPod及iPad下载提示信息 -->
+<div id="wxinfo" class="wxinfodiv" style="display:none">
+	<img src="cssv2/images/wxinfo.gif?r=201612132000" class="wxinfoimg" />
+</div>
+
+<form name="frmdirect" method="post" action="#">  
+<div id="loadBg" class="loadbgimgdiv" style="display:none;">
+	<img src="cssv2/images/bg_share.jpg?r=201612131400" class="loadbgimg"> 
+		
+	<div id="downloaddiv" class="downloaddiv">
+		<a onclick="downloadCtrl();"><img src="cssv2/images/btn_download.png?r=201612131400" class="downloadbtn"></a>
+	</div>
+</div>
+</div>
+</form>
 <script language="javascript">
 	/** 获取下载链接地址 */
 	function getUrl() {
@@ -65,7 +82,7 @@
 	}
 	
 	/** 非微信扫描，直接进入下载链接页面 */
-	if(!isWeixin()) {
+	if(isWeixin()) {
 		window.location = getUrl();
 	} else {
 		var loadBg = document.getElementById("loadBg");
@@ -76,8 +93,8 @@
 	function downloadCtrl() {
 	    /** 微信扫描且非Android手机，提示浏览器下载 */
 		if(isWeixin() && !isAndroid()) {
-			var extrainfo = document.getElementById("extrainfo");
-			extrainfo.style.display = "block";
+			var wxinfo = document.getElementById("wxinfo");
+			wxinfo.style.display = "block";
 			return false;
 		} else {
 			downloadApp();
@@ -90,18 +107,5 @@
 		frmdirect.submit();
 	}
 </script>
-
-<body>
-<form name="frmdirect" method="post" action="#">  
-<div id="loadBg" class="loadbgimgdiv" style="display:none;">
-	<img src="cssv2/images/bg_share.jpg?r=201612131400" class="loadbgimg">
-	<div id="extrainfo" class="extraimgdiv" style="display:none;">
-		<img id="extrainfoimg" src="cssv2/images/wxinfo.gif?r=201612131800" class="extraimg" />
-	</div>  
-	<div id="downloaddiv" class="downloaddiv">
-		<a onclick="downloadCtrl();"><img src="cssv2/images/btn_download.png?r=201612131400" class="downloadbtn"></a>
-	</div>
-</div>
-</form>
 </body>
 </html>
