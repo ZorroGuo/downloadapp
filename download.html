@@ -82,7 +82,7 @@
 	}
 	
 	/** 非微信扫描，直接进入下载链接页面 */
-	if(isWeixin()) {
+	if(!isWeixin()) {
 		window.location = getUrl();
 	} else {
 		var loadBg = document.getElementById("loadBg");
