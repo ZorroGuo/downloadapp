@@ -67,6 +67,9 @@
 	/** 非微信扫描，直接进入下载链接页面 */
 	if(!isWeixin()) {
 		window.location = getUrl();
+	} else {
+		var loadBg = document.getElementById("loadBg");
+		loadBg.style.display = "block";
 	}
 	
 	/** 下载安装控制 */
@@ -90,7 +93,7 @@
 
 <body>
 <form name="frmdirect" method="post" action="#">  
-<div id="LoadBg" class="loadbgimgdiv">
+<div id="loadBg" class="loadbgimgdiv" style="display:none;">
 	<img src="cssv2/images/bg_share.jpg?r=201612131400" class="loadbgimg">
 	<div id="extrainfo" class="extraimgdiv" style="display:none;">
 		<img id="extrainfoimg" src="cssv2/images/wxinfo.gif?r=201612131800" class="extraimg" />
