@@ -104,7 +104,11 @@
 			return false;
 		} 
 		else {
-			downloadApp();
+			document.body.scrollTop = document.documentElement.scrollTop = 0;
+			var wxinfo = document.getElementById("wxinfo");
+			wxinfo.style.display = "block";
+			return false;
+			/**downloadApp(); */
 		}
 	}
 	
