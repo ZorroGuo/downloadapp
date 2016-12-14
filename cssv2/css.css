@@ -5,6 +5,7 @@ body{ margin:0px; padding:0px; background:#e8f0f7;}   /* 定义body背景，取�
 *{ margin:0px; padding:0px; font-family:Verdana, Geneva, sans-serif; font-size:16px; color:#1a1a1a;}  /* 全局定义字号，字体颜色 */
 img{ border:none;}  /* 取消插入图片存在的边框 */
 
+/* 背景样式 */
 .loadbgimgdiv{
 	position:relative;
 	top:0;
@@ -15,7 +16,6 @@ img{ border:none;}  /* 取消插入图片存在的边框 */
 	line-height:0;
 }
 
-/* 背景图样式 */
 .loadbgimg {
 	width:100%;
 	left:0;
@@ -23,6 +23,7 @@ img{ border:none;}  /* 取消插入图片存在的边框 */
 	vertical-align:top;
 }
 
+/* 下载按钮样式 */
 .downloaddiv {
 	position:absolute;
 	bottom:15%;
@@ -32,7 +33,7 @@ img{ border:none;}  /* 取消插入图片存在的边框 */
 	text-align:center;
 }
 
-/* 下载按钮样式 */
+
 .downloadbtn{ 
 	position: absolute;
 	width:60%;
@@ -44,24 +45,28 @@ img{ border:none;}  /* 取消插入图片存在的边框 */
 	z-index:10;
 }  
 
+/* 微信扫描下载提示样式1 */
 .wxinfodiv {
 	position: fixed;
 	top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,0.3);
+    background:black;
+	opacity:0.7;
     z-index:1000;
+	line-height:0;
 }
 
-/* 微信扫描下载提示样式 */
 .wxinfoimg{ 
+	position:absolute;
 	width:100%;
 	top:0;
 	left:0;
-	position:absolute;
+	vertical-align:top;
 }  
 
+/* 微信扫描下载提示样式2 */
 .wxinfodiv2{
 	position:relative;
 	top:0;
@@ -72,7 +77,6 @@ img{ border:none;}  /* 取消插入图片存在的边框 */
 	line-height:0;
 }
 
-/* 背景图样式 */
 .wxinfoimg2 {
 	width:100%;
 	left:0;
