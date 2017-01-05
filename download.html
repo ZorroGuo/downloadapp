@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="MobileOptimized" content="320"/>
 	<meta name="format-detection" content="telephone=no">
-	<link href="cssv2/css.css?v=201612150000" rel="Stylesheet" type="text/css" media="screen">
+	<link href="cssv2/css.css?v=201701050000" rel="Stylesheet" type="text/css" media="screen">
 </head>
 
 <body>
@@ -21,10 +21,10 @@
 
 <form name="frmdirect" method="post" action="#">  
 <div id="loadbg" class="loadbgimgdiv" style="display:none;">
-	<img id="loadbgimg" src="cssv2/images/bg_share.jpg?v=201612140000" class="loadbgimg"> 
+	<img id="loadbgimg" src="cssv2/images/bg_share.jpg?v=201701050000" class="loadbgimg"> 
 		
 	<div id="download" class="downloaddiv">
-		<a onclick="downloadCtrl();"><img src="cssv2/images/btn_download.png?v=201612140000" class="downloadbtn"></a>
+		<a onclick="downloadCtrl();"><img src="cssv2/images/btn_download.png?v=201701050000" class="downloadbtn"></a>
 	</div>
 </div>
 </form>
@@ -71,7 +71,7 @@
 		{
 			return true;
 		} else {
-			return false;
+			return true;
 		}
 	}
 	
@@ -96,7 +96,7 @@
 	
 	/** 下载安装控制 */
 	function downloadCtrl() {
-	    /** 微信扫描提示浏览器下载 */
+	    /** 微信扫描且非Android手机，提示浏览器下载 */
 		if(isWeixin()) {
 			document.body.scrollTop = document.documentElement.scrollTop = 0;
 			var wxinfo = document.getElementById("wxinfo");
