@@ -97,7 +97,7 @@
 	/** 下载安装控制 */
 	function downloadCtrl() {
 	    /** 微信扫描且非Android手机，提示浏览器下载 */
-		if(isWeixin()) {
+		if(isWeixin() && !isAndroid()) {
 			document.body.scrollTop = document.documentElement.scrollTop = 0;
 			var wxinfo = document.getElementById("wxinfo");
 			wxinfo.style.display = "block";
