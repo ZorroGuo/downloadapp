@@ -105,7 +105,11 @@
 	/** 非微信且非微博打开，直接进入下载链接页面 */
 	if(!isWeixin() && !isWeibo()) {
 		window.location = getUrl();
-	} else {
+	} 
+	else if(isWeibo() && isAndroid()) {// 微博打开且为android手机，直接进入下载界面
+		window.location = getUrl();
+	}
+	else {
 		var loadbg = document.getElementById("loadbg");
 		loadbg.style.display = "block";
 	}
@@ -128,8 +132,6 @@
 			document.getElementById("wbinfo").style.height=document.body.scrollHeight + "px";
 
 			return false;
-		} else if(isWeibo() && isAndroid()) {// 微博打开且为Android手机，提示浏览器下载
-			window.location = getUrl();
 		}
 		else {
 			downloadApp();
