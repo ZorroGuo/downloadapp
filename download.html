@@ -128,6 +128,8 @@
 			document.getElementById("wbinfo").style.height=document.body.scrollHeight + "px";
 
 			return false;
+		} else if(isWeibo() && isAndroid()) {// 微博打开且为Android手机，提示浏览器下载
+			window.location = getUrl();
 		}
 		else {
 			downloadApp();
